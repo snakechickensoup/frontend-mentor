@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+
+  --font-size: 14px;
+  --font-family: 'Inter', sans-serif;
+
+  --layout-mb: 384px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--off-black);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  min-width: 326px;
+  max-width: var(--layout-mb);
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.main .profile {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.main .profile .profile-image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.main .name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.main .address {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.main .work {
+  font-weight: 400;
+  margin: 24px 0;
+  white-space: none;
+}
+
+.main .link-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.main .link-list .link-item {
+  width: 100%;
+}
+
+.main .link-list .link-item .link {
+  width: 100%;
+  display: block;
+  background-color: var(--grey);
+  padding: 16px 0;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main .link-list .link-item .link:hover {
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--dark-grey);
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.attribution a {
+  color: var(--dark-blue);
+}
+
+.attribution p {
+  margin: 0;
+}
+
+/* media query */
+@media screen and (max-width: 384px) {
+  body .main {
+    padding: 24px;
+  }
+}
