@@ -31,10 +31,11 @@ html {
 body {
 	width: 100%;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	padding-top: 24px;
 	justify-content: center;
 	align-items: center;
+	grid-template-rows: 1fr 80px;
 }
 
 h2,
@@ -127,12 +128,7 @@ p {
 }
 
 .attribution {
-	position: absolute;
-	bottom: 1em;
-	right: 1em;
-	display: flex;
-	flex-direction: column;
-	align-items: end;
+	text-align: right;
 }
 
 @media (max-width: 640px) {
