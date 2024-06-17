@@ -73,13 +73,10 @@
 						required
 						aria-required="true"
 						aria-describedby="email-error" />
-					<p
-						id="email-error"
-						class="erorr-message valid hide"
-						aria-live="polite">
+					<p class="email-error error-message valid hide" aria-live="polite">
 						Please enter a valid email address
 					</p>
-					<p id="email-error" class="erorr-message hide" aria-live="polite">
+					<p class="email-error error-message hide" aria-live="polite">
 						This field is required
 					</p>
 				</div>
@@ -88,7 +85,7 @@
 				<fieldset id="query-type-field">
 					<legend>Query Type</legend>
 					<div id="radios-field">
-						<div class="radio">
+						<div class="radio" aria-checked="false">
 							<input
 								type="radio"
 								id="general"
@@ -97,7 +94,7 @@
 								style="display: none" />
 							<label for="general">General Enquiry</label>
 						</div>
-						<div class="radio">
+						<div class="radio" aria-checked="false">
 							<input
 								type="radio"
 								id="support"
@@ -130,16 +127,17 @@
 				</div>
 
 				<!-- check -->
-				<div id="checkbox-field" class="checkbox">
-					<input
-						type="checkbox"
-						id="terms"
-						name="terms"
-						required
-						aria-required="true"
-						aria-describedby="terms-error"
-						style="display: none" />
-					<label for="terms">I consent to being contacted by the team </label>
+				<div id="checkbox-wrap">
+					<div id="checkbox-field" class="checkbox" aria-checked="false">
+						<input
+							type="checkbox"
+							id="terms"
+							name="terms"
+							required
+							aria-required="true"
+							aria-describedby="terms-error" />
+						<label for="terms">I consent to being contacted by the team </label>
+					</div>
 					<p id="terms-error" class="error-message hide" aria-live="polite">
 						To submit this form, please consent to being contacted
 					</p>
@@ -172,5 +170,6 @@
 				<a href="https://github.com/snakechickensoup">snakechickensoup</a>.
 			</p>
 		</footer>
+		<script src="./script.js"></script>
 	</body>
 </html>
