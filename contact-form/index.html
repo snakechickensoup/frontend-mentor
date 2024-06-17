@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Contact form</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+	<body>
+		<main id="main">
+			<header id="header ">
+				<h1 id="form-title">Contact Us</h1>
+			</header>
+
+			<form
+				id="form"
+				action="/submit"
+				method="post"
+				aria-labelledby="form-title">
+				<!-- name -->
+				<div id="name-field">
+					<div class="field">
+						<label for="first-name">First Name</label>
+						<input
+							type="text"
+							id="first-name"
+							name="first-name"
+							required
+							aria-required="true"
+							aria-describedby="first-name-error" />
+						<p
+							id="first-name-error"
+							class="error-message hide"
+							aria-live="polite">
+							This field is required
+						</p>
+					</div>
+					<div class="field">
+						<label for="last-name">Last Name</label>
+						<input
+							type="text"
+							id="last-name"
+							name="last-name"
+							required
+							aria-required="true"
+							aria-describedby="last-name-error" />
+						<p
+							id="last-name-error"
+							class="error-message hide"
+							aria-live="polite">
+							This field is required
+						</p>
+					</div>
+				</div>
+
+				<!-- email -->
+				<div id="email-field" class="field">
+					<label for="email">Email Address</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						required
+						aria-required="true"
+						aria-describedby="email-error" />
+					<p class="email-error error-message valid hide" aria-live="polite">
+						Please enter a valid email address
+					</p>
+					<p class="email-error error-message hide" aria-live="polite">
+						This field is required
+					</p>
+				</div>
+
+				<!-- query type -->
+				<fieldset id="query-type-field">
+					<legend>Query Type</legend>
+					<div id="radios-field">
+						<div class="radio" aria-checked="false">
+							<input
+								type="radio"
+								id="general"
+								name="general"
+								aria-describedby="query-type-error"
+								style="display: none" />
+							<label for="general">General Enquiry</label>
+						</div>
+						<div class="radio" aria-checked="false">
+							<input
+								type="radio"
+								id="support"
+								name="support"
+								aria-describedby="query-type-error"
+								style="display: none" />
+							<label for="support">Support Request</label>
+						</div>
+					</div>
+					<p
+						id="query-type-error"
+						class="error-message hide"
+						aria-live="polite">
+						Please select a query type
+					</p>
+				</fieldset>
+
+				<!-- message -->
+				<div id="message-field" class="field">
+					<label for="message">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						required
+						aria-required="true"
+						aria-describedby="message-error"></textarea>
+					<p id="message-error" class="error-message hide" aria-live="polite">
+						This field is required
+					</p>
+				</div>
+
+				<!-- check -->
+				<div id="checkbox-wrap">
+					<div id="checkbox-field" class="checkbox" aria-checked="false">
+						<input
+							type="checkbox"
+							id="terms"
+							name="terms"
+							required
+							aria-required="true"
+							aria-describedby="terms-error" />
+						<label for="terms">I consent to being contacted by the team </label>
+					</div>
+					<p id="terms-error" class="error-message hide" aria-live="polite">
+						To submit this form, please consent to being contacted
+					</p>
+				</div>
+
+				<!-- submit -->
+				<button type="submit" id="submit" aria-label="form submit">
+					Submit
+				</button>
+			</form>
+		</main>
+
+		<!-- alert -->
+		<section id="confirm" role="alert" aria-live="assertive">
+			<h2 class="confirm-title"><span id="alert-icon"></span>Message Sent!</h2>
+			<p class="confirm-message">
+				Thanks for completing the form. We'll be in touch soon!
+			</p>
+		</section>
+
+		<footer class="footer attribution">
+			<p class="frontend-mentor">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+					Frontend Mentor.
+				</a>
+			</p>
+			<p class="github">
+				Coded by
+				<a href="https://github.com/snakechickensoup">snakechickensoup</a>.
+			</p>
+		</footer>
+		<script src="./script.js"></script>
+	</body>
+</html>
