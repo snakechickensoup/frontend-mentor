@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  --background: #eeebef;
+
+  --font-size: 18px;
+  --font-family: 'DM Sans', sans-serif;
+  --font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  color: var(--black);
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background-color: var(--background);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#main {
+  height: 100vh;
+  max-width: 1120px;
+  display: grid;
+  /* grid-template-areas:
+    'create social social   schedule'
+    'create social social   schedule'
+    'create social social   schedule'
+    'create social social   schedule'
+    'create manage maintain schedule'
+    'write  manage maintain schedule'
+    'write  manage maintain schedule'
+    'write  percent grow     grow'
+    'write  percent grow     grow'
+    'write  percent grow     grow'; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 32px;
+}
+
+section {
+  border-radius: 12px;
+}
+
+.white {
+  color: var(--white);
+}
+
+.yellow500 {
+  color: var(--yellow-500);
+}
+
+.yellow100 {
+  color: var(--yellow-100);
+}
+
+.purple500 {
+  color: var(--purple-500);
+}
+
+.italic {
+  font-style: italic;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.social {
+  grid-column: 2 / 4;
+  grid-row: 1 / 5;
+  background-color: var(--purple-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.social h2 {
+  font-size: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin-bottom: 16px;
+}
+
+.social img {
+  height: 32px;
+}
+
+.manage {
+  grid-column: 2 / 3;
+  grid-row: 5 / 8;
+  background-color: var(--white);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.manage h2 {
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.manage img {
+  height: 64px;
+}
+
+.maintain {
+  grid-column: 3 / 4;
+  grid-row: 5 / 8;
+  background-color: var(--yellow-500);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.maintain h2 {
+  font-size: 28px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.maintain img {
+  width: 100%;
+}
+
+.schedule {
+  grid-column: 4 / 5;
+  grid-row: 1 / 8;
+  background-color: var(--purple-100);
+  padding: 32px;
+  overflow: hidden;
+}
+
+.schedule h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 24px;
+}
+
+.schedule img {
+  height: 320px;
+  margin: 16px 0;
+}
+
+.schedule p {
+  line-height: 20px;
+}
+
+.grow {
+  grid-column: 3 / 5;
+  grid-row: 8 / 11;
+  background-color: var(--purple-500);
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  align-items: center;
+}
+
+.grow img {
+  height: 100%;
+}
+
+.grow h2 {
+  font-size: 40px;
+  line-height: 36px;
+}
+
+.percent {
+  grid-column: 2 / 3;
+  grid-row: 8 / 11;
+  padding: 24px;
+  background-color: var(--white);
+  position: relative;
+}
+
+.percent h2 {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.percent img {
+  width: 160px;
+  position: absolute;
+  bottom: 16px;
+}
+
+.create {
+  grid-column: 1 / 2;
+  grid-row: 1 / 6;
+  background-color: var(--yellow-100);
+  padding: 32px;
+}
+
+.create h2 {
+  font-size: 40px;
+  line-height: 32px;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.create img {
+  width: 100%;
+}
+
+.write {
+  grid-column: 1 / 2;
+  grid-row: 6 / 11;
+  background-color: var(--yellow-500);
+  padding: 24px 12px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.write h2 {
+  font-size: 40px;
+  line-height: 32px;
+  letter-spacing: -1px;
+}
+
+.write img {
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 12px;
+  color: var(--white);
+}
+
+@media (max-width: 1000px) {
+  #main {
+    height: fit-content;
+    grid-template-areas:
+      'social social social'
+      'social social social'
+      'social social social'
+      'social social social'
+      'manage maintain percent'
+      'manage maintain percent'
+      'manage maintain percent'
+      'grow grow grow'
+      'grow grow grow'
+      'grow grow grow'
+      'schedule create write'
+      'schedule create write'
+      'schedule create write'
+      'schedule create write'
+      'schedule create write';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(15, 64px);
+
+    .social,
+    .grow {
+      grid-column: 1 / 4;
+    }
+
+    .social {
+      grid-row: 1 / 5;
+    }
+
+    .manage,
+    .schedule {
+      grid-column: 1 / 2;
+    }
+
+    .maintain,
+    .create {
+      grid-column: 2 / 3;
+    }
+
+    .percent,
+    .write {
+      grid-column: 3 / 4;
+    }
+
+    .manage,
+    .maintain,
+    .percent {
+      grid-row: 5 / 8;
+    }
+
+    .grow {
+      grid-row: 8 / 11;
+    }
+
+    .schedule,
+    .create,
+    .write {
+      grid-row: 11 / 17;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .social {
+    padding: 40px;
+  }
+
+  .social h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .manage {
+    padding: 16px;
+  }
+
+  .manage h2 {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .maintain {
+    padding: 16px;
+    max-height: 220px;
+  }
+
+  .maintain h2 {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .maintain img {
+    width: 70%;
+  }
+
+  .schedule {
+    text-align: center;
+    padding: 32px 16px;
+  }
+
+  .schedule h2 {
+    font-size: 24px;
+  }
+
+  .schedule img {
+    margin: 24px 0;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .schedule p {
+    padding: 0 16px;
+  }
+
+  .grow {
+    padding: 24px 56px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grow img {
+    width: 100%;
+  }
+
+  .grow h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 28px;
+  }
+
+  .percent h2 {
+    font-size: 48px;
+  }
+
+  .percent p {
+    margin: 8px 0 24px;
+  }
+
+  .percent img {
+    position: static;
+  }
+
+  .create h2 {
+    font-size: 32px;
+  }
+
+  .create img {
+    width: 60%;
+  }
+
+  .write h2 {
+    font-size: 32px;
+    line-height: 28px;
+  }
+
+  .write img {
+    margin-top: 16px;
+    width: 70%;
+  }
+}
